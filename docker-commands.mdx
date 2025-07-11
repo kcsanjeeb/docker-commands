@@ -1,1 +1,32 @@
+### Docker Commands
 
+```bash
+# To remove all Docker images
+docker rmi -f $(docker images -q)
+
+# Remove all unused data (images, containers, volumes, networks) 
+docker system prune -a -f
+
+# Shows all networks (bridge, host, none, and user-defined)
+docker network ls
+
+# To inspect a specific network:
+docker network inspect <network_name_or_id>
+
+# View Docker Volumes
+docker volume ls
+
+# To inspect details of a specific volume:
+docker volume inspect <volume_name>
+
+# View Docker Containers
+docker ps           # Running containers only
+docker ps -a        # All containers (running + stopped)
+
+# To inspect a container:
+docker inspect <container_id_or_name>
+
+# View Docker Images
+docker images             # Lists all locally stored images.
+docker images -q          # To see just the IDs
+```
